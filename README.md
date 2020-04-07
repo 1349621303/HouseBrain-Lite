@@ -30,6 +30,12 @@
 >
 > 如果有“ImportError: No module named 'MySQLdb'”报错，是因为python2和python3在数据库模块支持这里存在区别，python2是mysqldb，而到了python3就变成mysqlclient，pip install mysqlclient即可。因为现有学习资料(尤其是网课)很多的flask教程都是基于python2的，所以难免会有一些差异
 
+```
+# 史上最坑问题，现在也不清楚究竟是怎么回事，是FLASK_ ENV而不是FLASK_ENV
+# python中os模块获取环境变量的一个方法，FLASK_ ENV为flask中内置的配置变量
+env = os.environ.get("FLASK_ ENV", "develop")
+```
+
 
 
 
