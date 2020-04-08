@@ -1,11 +1,49 @@
 <component name="ProjectDictionaryState">
   <dictionary name="lgx">
     <words>
+      <w>adminlte</w>
+      <w>chartsdata</w>
+      <w>daterange</w>
+      <w>daterangepicker</w>
+      <w>echarts</w>
+      <w>fastclick</w>
+      <w>glyphicon</w>
       <w>housebrain</w>
       <w>housebrainlite</w>
+      <w>hutter</w>
       <w>indexblue</w>
+      <w>inhumidity</w>
+      <w>intemperature</w>
+      <w>ionicons</w>
+      <w>jvectormap</w>
+      <w>langdon</w>
+      <w>lightlave</w>
+      <w>lightmoney</w>
+      <w>myclass</w>
+      <w>mymoney</w>
+      <w>mysel</w>
+      <w>mysele</w>
+      <w>myselec</w>
+      <w>myselect</w>
+      <w>mysels</w>
+      <w>myupdate</w>
+      <w>navbar</w>
+      <w>outhumidity</w>
+      <w>outtemperature</w>
       <w>pymysql</w>
+      <w>regist</w>
+      <w>roomadmin</w>
+      <w>roomleader</w>
+      <w>roomname</w>
+      <w>roomnumber</w>
+      <w>slimscroll</w>
+      <w>sparkline</w>
       <w>sqlalchemy</w>
+      <w>treeview</w>
+      <w>uibutton</w>
+      <w>userblue</w>
+      <w>waterlave</w>
+      <w>watermoney</w>
     </words>
   </dictionary>
 </component>

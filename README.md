@@ -19,6 +19,7 @@
 > 生成迁移仓库(migration)的三句命令行：
 >
 > ```shell
+> # 第一次执行这三个语句，之后如果需要更新数据库的内容只需要执行后两行语句
 > python manage.py db init
 > python manage.py db migrate
 > python manage.py db upgrade

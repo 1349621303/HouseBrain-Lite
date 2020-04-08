@@ -65,11 +65,32 @@ def index():
 
 @userblue.route('/account')
 def account():
-    return render_template('account.html')
+    return render_template('index.html')
+
+# 用户登出
+@userblue.route('/logout', methods=['POST', 'GET'])
+def logout():
+    session.clear()
+    return redirect(url_for('userblue.login'))
 
 
 
+# 用户注册
+@userblue.route('/regist', methods=['POST', 'GET'])
+def regist():
+
+    user = User()
+    user.username = request.form.get('regist_username')
+    user.password = request.form.get('regist_password')
+    user.email = request.form.get('regist_email')
+
+    db.session.add(user)
+    db.session.commit()
+
+    return redirect(url_for('userblue.login'))
 
 
-
+@userblue.route('/myselect')
+def myselect():
+    return render_template('myselect.html')
 
