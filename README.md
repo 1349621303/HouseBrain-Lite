@@ -1,4 +1,5 @@
-# HouseBrain-Lite项目【软件工程基础作业的项目文档&组内学习笔记】
+# HouseBrain-Lite项目
+#【软件工程基础作业的项目文档&组内学习笔记】
 
 > This is a smart room monitoring system developed based on the Flask framework and OpenCV technology, using the Raspberry Pi as a server to deploy the project.
 
