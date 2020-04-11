@@ -3,7 +3,7 @@
 
 > This is a smart room monitoring system developed based on the Flask framework and OpenCV technology, using the Raspberry Pi as a server to deploy the project.
  
-项目大体框架 from lgx
+# 项目大体框架 from lgx
  
 | 安装指令(或在PyCharm中直接安装插件) | 用途                            | 版本号 |
 | ----------------------------------- | ------------------------------- | ------ |
@@ -12,11 +12,6 @@
 | Flask-Script                        | Flask脚本                       |        |
 | Flask-SQLAlchemy                    | 一种用于Flask的ORM框架          |        |
 | PyMySQL                             | python的MySQL插件               |        |
-|                                     |                                 |         |
-|                                     |                                 |        |
-
-
-
 
 
 > 生成迁移仓库(migration)的三句命令行：
