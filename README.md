@@ -1,6 +1,6 @@
 # HouseBrain-Lite
 
-### `软件工程基础`作业的项目文档&组内学习笔记
+### `软件工程基础`作业的项目文档&组内学习笔记 from lgx
 
 > This is a smart room monitoring system developed based on the Flask framework and OpenCV technology, using the Raspberry Pi as a server to deploy the project.
 
@@ -50,7 +50,7 @@
 
 最后收藏的一些比较好的和本项目有关的博客，不过有不少问题实际上也是书上找到的，这里推荐大家都有的一本书《Flask Web开发》（第二版），如果想看本书源码请进入该链接 https://github.com/miguelgrinberg/flasky 
 
-[Python Flask-表单提交方式]: https://blog.csdn.net/Co_zy/article/details/76658862
+[Python Flask-表单提交方式]: https://blog.csdn.net/Co_zy/article/details/76658862	"Python Flask-表单提交方式"
 [数据库迁移Target database is not up to date报错]: https://blog.csdn.net/huang5487378/article/details/66973805
 [pip 常用命令]: https://blog.csdn.net/sunlanchang/article/details/52563882
 [Pycharm项目上传到Github]: https://blog.csdn.net/m0_37306360/article/details/79322947
