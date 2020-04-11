@@ -50,17 +50,26 @@
 
 最后收藏的一些比较好的和本项目有关的博客，不过有不少问题实际上也是书上找到的，这里推荐大家都有的一本书《Flask Web开发》（第二版），如果想看本书源码请进入该链接 https://github.com/miguelgrinberg/flasky 
 
-[Python Flask-表单提交方式]: https://blog.csdn.net/Co_zy/article/details/76658862	"Python Flask-表单提交方式"
-[数据库迁移Target database is not up to date报错]: https://blog.csdn.net/huang5487378/article/details/66973805
-[pip 常用命令]: https://blog.csdn.net/sunlanchang/article/details/52563882
-[Pycharm项目上传到Github]: https://blog.csdn.net/m0_37306360/article/details/79322947
-[SQLAlchemy简明教程]: https://jiajunhuang.com/articles/2019_10_30-sqlalchemy.md.html
-[Flask 环境变量 FLASK_APP 说明]: https://foofish.net/flask_app.html
+
+
+> Python Flask-表单提交方式 https://blog.csdn.net/Co_zy/article/details/76658862
+>
+> 数据库迁移Target database is not up to date报错 https://blog.csdn.net/huang5487378/article/details/66973805 
+>
+> pip 常用命令 https://blog.csdn.net/sunlanchang/article/details/52563882
+>
+> Pycharm项目上传到Github https://blog.csdn.net/m0_37306360/article/details/79322947
+>
+> SQLAlchemy简明教程 https://jiajunhuang.com/articles/2019_10_30-sqlalchemy.md.html
+>
+> Flask 环境变量 FLASK_APP 说明 https://foofish.net/flask_app.html
 
 
 
 # 宿舍视频流实现 form lwl
+
 主要技术：
+
 - opencv
 - 深度学习
 - 请求处理
@@ -68,31 +77,22 @@
 ## 主要实现功能
 
 ### 视频监控
+
 发现行人可以及时检测出，并且圈出这些人
 关于与后端的接口交互问题，建议开启跨域访问，留下相关接口。我可以直接在监控模块中留下可以发出请求的函数
 
 ### 人脸识别开门
+
 使用opencv进行图片收集，DL进行人脸识别
 准确率较高。
 问题：需要进行硬件模拟
 
 ### 关于宿舍卫生状况提醒
+
 使用深度学习制作的图片分类问题，能够较精确的判断宿舍是干净还是比较脏。
 目前设想是每天固定时间段对宿舍进行卫生，如果检测判定为脏，那么就发送邮件等提醒给用户，并且附上图片
+
 - 使用kaggle上的数据
 - cnn卷积神经网络，正则化，图像增强防止过拟合
 - 迁移学习（考虑到性能，还是不用为好）
-目前在较低的内存开销下，能够实现80%的正确率。
-
-
-
-
-
-
-
-
-
-
-
-
-
+  目前在较低的内存开销下，能够实现80%的正确率。
