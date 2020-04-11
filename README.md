@@ -10,7 +10,7 @@
 | Flask-Script                        | Flask脚本                       |        |
 | Flask-SQLAlchemy                    | 一种用于Flask的ORM框架          |        |
 | PyMySQL                             | python的MySQL插件               |        |
-|                                     |                                 |        |
+|                                     |                                 |         |
 |                                     |                                 |        |
 
 
