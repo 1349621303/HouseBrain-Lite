@@ -1192,7 +1192,7 @@ $.fn.position = function( options ) {
 	// clone to reuse original targetOffset later
 	basePosition = $.extend( {}, targetOffset );
 
-	// force my and at to have valid horizontal and vertical positions
+	// force myinfo and at to have valid horizontal and vertical positions
 	// if a value is missing or invalid, it will be converted to center
 	$.each( [ "my", "at" ], function() {
 		var pos = ( options[ this ] || "" ).split( " " ),
@@ -10663,7 +10663,7 @@ var effectBlind = $.effects.effect.blind = function( o, done ) {
 		show = mode === "show",
 		wrapper, distance, margin;
 
-	// if already wrapped, the wrapper's properties are my property. #6245
+	// if already wrapped, the wrapper's properties are myinfo property. #6245
 	if ( el.parent().is( ".ui-effects-wrapper" ) ) {
 		$.effects.save( el.parent(), props );
 	} else {

@@ -217,16 +217,16 @@
           <!-- User Account: style can be found in dropdown.less -->
           <li class="dropdown user user-menu">
             <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-              <img src="{{ session.get('user').get('userPic') }}" class="user-image" alt="User Image">
-              <span class="hidden-xs">{{ session.get('user').get('userName')}}</span>
+              <img src="{{ session.get('user').get('userpic') }}" class="user-image" alt="User Image">
+              <span class="hidden-xs">{{ session.get('user').get('username')}}</span>
             </a>
             <ul class="dropdown-menu">
               <!-- User image -->
               <li class="user-header">
-                <img src="{{ session.get('user').get('userPic') }}" class="img-circle" alt="User Image">
+                <img src="{{ session.get('user').get('userpic') }}" class="img-circle" alt="User Image">
 
                 <p>
-                  {{ session.get('user').get('userName') }}
+                  {{ session.get('user').get('username') }}
                   <small></small>
                 </p>
               </li>
@@ -241,8 +241,8 @@
               </li>
             </ul>
           </li>
+
         </ul>
       </div>
     </nav>
   </header>
-</div>

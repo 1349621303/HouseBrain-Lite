@@ -22,6 +22,7 @@ from App.settings import envs
 #from App.myconfig import envs
 # 引入蓝图模块，有多少引入多少
 from App.views.user import userblue
+from App.views.room import roomblue
 
 def create_app(env):
     #创建app,由主入口manage.py进行调用create_app
@@ -35,7 +36,7 @@ def create_app(env):
 
     #注册蓝图
     app.register_blueprint(userblue)
-
+    app.register_blueprint(roomblue)
     #初始化第三方扩展库，包括SQLAlchemy及Migrate等第三方库
     init_ext(app=app)
 

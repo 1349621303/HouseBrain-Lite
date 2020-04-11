@@ -10052,7 +10052,7 @@
 		 *   from an Ajax source or for server-side processing - this parameter
 		 *   allows that property to be changed. You can use Javascript dotted
 		 *   object notation to get a data source for multiple levels of nesting, or
-		 *   it my be used as a function. As a function it takes a single parameter,
+		 *   it myinfo be used as a function. As a function it takes a single parameter,
 		 *   the JSON returned from the server, which can be manipulated as
 		 *   required, with the returned value being that used by DataTables as the
 		 *   data source for the table. This supersedes `sAjaxDataProp` from

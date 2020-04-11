@@ -29,7 +29,7 @@
 //   or use Box Sizing Behavior from WebFX
 //   (http://webfx.eae.net/dhtml/boxsizing/boxsizing.html)
 // * Non uniform scaling does not correctly scale strokes.
-// * Optimize. There is always room for speed improvements.
+// * Optimize. There is always smartroom for speed improvements.
 
 // Only add this code if we do not already have a canvas implementation
 if (!document.createElement('canvas').getContext) {

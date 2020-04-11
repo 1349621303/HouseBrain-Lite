@@ -3362,7 +3362,7 @@ var InteractiveDateComponent = /** @class */ (function (_super) {
     InteractiveDateComponent.prototype.shouldIgnoreTouch = function () {
         var view = this._getView();
         // On iOS (and Android?) when a new selection is initiated overtop another selection,
-        // the touchend never fires because the elements gets removed mid-touch-interaction (my theory).
+        // the touchend never fires because the elements gets removed mid-touch-interaction (myinfo theory).
         // HACK: simply don't allow this to happen.
         // ALSO: prevent selection when an *event* is already raised.
         return view.isSelected || view.selectedEvent;

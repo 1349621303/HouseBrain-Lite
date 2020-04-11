@@ -7,6 +7,7 @@
       <w>daterangepicker</w>
       <w>echarts</w>
       <w>fastclick</w>
+      <w>functionblue</w>
       <w>glyphicon</w>
       <w>housebrain</w>
       <w>housebrainlite</w>
@@ -36,6 +37,7 @@
       <w>roomleader</w>
       <w>roomname</w>
       <w>roomnumber</w>
+      <w>roomworld</w>
       <w>slimscroll</w>
       <w>sparkline</w>
       <w>sqlalchemy</w>

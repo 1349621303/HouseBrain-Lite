@@ -158,7 +158,7 @@ $.fn.position = function( options ) {
 	// clone to reuse original targetOffset later
 	basePosition = $.extend( {}, targetOffset );
 
-	// force my and at to have valid horizontal and vertical positions
+	// force myinfo and at to have valid horizontal and vertical positions
 	// if a value is missing or invalid, it will be converted to center
 	$.each( [ "my", "at" ], function() {
 		var pos = ( options[ this ] || "" ).split( " " ),

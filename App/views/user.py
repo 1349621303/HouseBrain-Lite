@@ -37,6 +37,9 @@ def login():
             userItem = {}
             # 开始存数据
             userItem['username'] = result.username
+            userItem['userpic'] = result.userpic
+            userItem['roomid'] = result.roomid
+
             # session是http协议的状态跟踪技术，http协议是tcp短连接
             session['user'] = userItem
             # 登录成功，则保存Cookies信息
@@ -89,8 +92,32 @@ def regist():
 
     return redirect(url_for('userblue.login'))
 
-
-@userblue.route('/myselect')
+# 用户查看自己的个人信息
+@userblue.route('/myinfo/myselect', methods=['POST', 'GET'])
 def myselect():
-    return render_template('myselect.html')
+    item =  session.get('user')
+    user = User.query.filter(User.username == item.get("username")).first()
+    return render_template('myinfo/myselect.html',user = user)
 
+
+# 用户修改自己的个人信息
+@userblue.route('/myinfo/myupdate', methods=['POST', 'GET'])
+def myupdate():
+    item = session.get('user')
+    user = User.query.filter(User.username == item.get("username")).first()
+    if request.method == 'GET':
+        return render_template('myinfo/myupdate.html',user = user)
+    else:
+        user.email = request.form.get('myupdate_email')
+        user.phone = request.form.get('myupdate_phone')
+        user.password = request.form.get('myupdate_password')
+        user.introduction = request.form.get('myupdate_introduction')
+        db.session.add(user)
+        db.session.commit()
+
+        return render_template('myinfo/myupdate.html',user = user,message='修改成功')
+
+# targets 部分
+@userblue.route('/smartroom/targets')
+def targets():
+    return render_template('smartroom/targets.html')

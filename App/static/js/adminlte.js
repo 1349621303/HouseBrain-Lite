@@ -21,7 +21,7 @@ throw new Error('AdminLTE requires jQuery')
  * =========
  * Adds AJAX content control to a box.
  *
- * @Usage: $('#my-box').boxRefresh(options)
+ * @Usage: $('#myinfo-box').boxRefresh(options)
  *         or add [data-widget="box-refresh"] to the box element
  *         Pass any option as data-option="value"
  */
@@ -142,7 +142,7 @@ throw new Error('AdminLTE requires jQuery')
  * ======
  * Adds box widget functions to boxes.
  *
- * @Usage: $('.my-box').boxWidget(options)
+ * @Usage: $('.myinfo-box').boxWidget(options)
  *         This plugin auto activates on any element using the `.box` class
  *         Pass any option as data-option="value"
  */
@@ -451,7 +451,7 @@ throw new Error('AdminLTE requires jQuery')
  * ===============
  * Toggles the state of the control sidebar
  *
- * @Usage: $('#my-chat-box').directChat()
+ * @Usage: $('#myinfo-chat-box').directChat()
  *         or add [data-widget="direct-chat"] to the trigger
  */
 +function ($) {
@@ -877,7 +877,7 @@ throw new Error('AdminLTE requires jQuery')
  * =========
  * Converts a list into a todoList.
  *
- * @Usage: $('.my-list').todoList(options)
+ * @Usage: $('.myinfo-list').todoList(options)
  *         or add [data-widget="todo-list"] to the ul element
  *         Pass any option as data-option="value"
  */
@@ -988,7 +988,7 @@ throw new Error('AdminLTE requires jQuery')
  * Converts a nested list into a multilevel
  * tree view menu.
  *
- * @Usage: $('.my-menu').tree(options)
+ * @Usage: $('.myinfo-menu').tree(options)
  *         or add [data-widget="tree"] to the ul element
  *         Pass any option as data-option="value"
  */
