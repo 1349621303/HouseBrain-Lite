@@ -66,32 +66,7 @@
 
 ### 下面是关于本项目架构的说明
 
-├**App文件夹的项目树**
-├─ &#95;&#95;init&#95;&#95; .py												   //初始化文件，本项目中可以对setting、ext、views进行初始化，
-├─ext.py															//ext(extends)，即第三方扩展库，这里目前的作用是让model进行懒加载功能，同时让model在&#95;&#95;init&#95;&#95;.py中进行初始化
-├─models.py													//这里用于定义数据库的模型，可以通过model生成表结构
-├─settings.py												   //这里用于配置数据库连接
-└─views.py													   //这里是项目中存放蓝图(blueprint)的部分，也就是后端逻辑部分，通常是数据库中的一个表对应一个.py文件
-|   |      ├─room.py										 //对应room表部分，也就是寝室部分						
-|   |      └user.py											  //对应user表部分，也就是用户部分
-├─templates													//这里是项目的模板部分，用于放置前端HTML页面(all)
-|     ├─footer.html										  //框架的底部页面(lgx)
-|     ├─index.html										   //登录后进入的首页(None)
-|     ├─left.html											   //框架的左侧页面(all)
-|     ├─login.html											//登录注册界面(lgx)
-|     ├─top.html											   //框架的头部页面(lgx)
-|     ├─smartroom										  //“智慧寝室”包
-|     |     ├─roomcheck.html						  //"寝室维修"的页面(None)
-|     |     ├─roommoney.html						//"水电缴费"的页面(lgx)
-|     |     ├─roompet.html							  //"宠物喂养"的页面(None)
-|     |     ├─roomworld.html						  //"花草世界"的页面(None)
-|     |     └targets.html									//"个人空间"的界面(lgx)
-|     ├─roommonitor									  //"寝室监控"包
-|     ├─myinfo												  //“我的信息”包
-|     |   ├─mymoney.html							  //"我的账单"的页面(None)
-|     |   ├─myselect.html								//“信息查询”的页面(lgx)
-|     |   └myupdate.html								//“信息修改”的页面(lgx)
-├─static															//这里是静态文件目录，css、js、img(图片)等都可以放到这里(all)
+![在这里插入图片描述](https://img-blog.csdnimg.cn/20200412151217594.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MzU3NzY3NQ==,size_16,color_FFFFFF,t_70)
 
 项目的根目录下的几个文件我做一下单独的说明：
 
