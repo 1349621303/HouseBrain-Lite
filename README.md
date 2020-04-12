@@ -36,7 +36,7 @@
 >
 > ![在这里插入图片描述](https://img-blog.csdnimg.cn/20200412000938997.png)
 
-下面的是迁移仓库使用时的常见错误
+ 下面的是迁移仓库使用时的常见错误
 
 > 如果数据库迁移Target database is not up to date报错，删掉migration之后重新执行上述三句命令行即可，
 >
