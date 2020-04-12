@@ -1,4 +1,4 @@
-# HouseBrain-Lite
+ # HouseBrain-Lite
 
 ### `软件工程基础`作业的项目文档&组内学习笔记 from lgx
 
