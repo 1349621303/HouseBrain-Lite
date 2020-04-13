@@ -4,7 +4,7 @@ import numpy as np
  
  
 def is_inside(o, i):
-    	ox, oy, ow, oh = o
+	ox, oy, ow, oh = o
 	ix, iy, iw, ih = i
 	return ox > ix and oy > iy and ox + ow < ix + iw and oy + oh < iy + ih
  

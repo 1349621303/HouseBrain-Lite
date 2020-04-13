@@ -23,6 +23,13 @@ userblue = Blueprint('userblue', __name__)
 
 # 配置路由
 
+
+@userblue.route('/camera', methods=['POST', 'GET'])
+def camera():
+    return render_template('camera.html')
+
+
+
 @userblue.route('/',methods=['GET','POST'])
 def login():
     if request.method == 'GET':

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>Home</title>
+<script src="/static/js/vue.min.js"></script>
+
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,600" />
+  <link rel="stylesheet" href="/static/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="/static/css/templatemo-style.css" />
+
+</head>
+
+<body>
+<div id="app">
+
+  <div class="tm-page-container mx-auto">
+    <header class="tm-header text-center">
+      <h1 class="tm-title text-uppercase">SH Room</h1>
+      <p class="tm-primary-color"><i>bring you a new life</i></p>
+    </header>
+
+    <section class="tm-section">
+      <nav class="tm-nav">
+      
+      </nav>
+      <div class="tm-content-container">
+        <figure class="mb-0" v-if="num">
+          <img :src="imgUrl" alt="Image" class="img-fluid tm-img" />
+        </figure>
+        <div class="tm-content">
+          <h2 class="tm-page-title">智能宿舍</h2>
+          <p class="mb-4">
+            智能宿舍的实时监控情况，当有行人的时侯会自动监控，并且发起通知。
+          </p>
+          
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <span></span>
+    </footer>
+  </div>
+
+</div>
+</body>
+<script>
+var vm = new Vue({
+
+  el: '#app',
+  data: {
+	test :"test",
+  imgUrl:"static/img/photo2.png",
+  timer:"",
+  num:0
+
+
+
+  },
+  created(){
+	  console.log(this.test);
+	  this.initDate();
+
+	  //载入值
+
+  },
+  methods:{
+	  initDate(){
+          this.timer = setInterval(this.update, 2000);
+	  },
+
+    update(){
+      this.$forceUpdate();
+      console.log("updata");
+      this.num = this.num +1;
+      //这个思路是真的不错，利用随机数的办法，解决了缓存的问题，并不是更新缓存，而是加上动态更新。666
+      this.imgUrl = "static/img/photo2.png?ran="+ this.num;
+    }
+
+	  
+
+  }
+  
+})
+</script>
+</html>

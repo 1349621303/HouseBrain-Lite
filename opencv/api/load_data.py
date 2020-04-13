@@ -215,6 +215,16 @@ def pre(model, img):
 
         return index, pro
 
+ 
+def is_inside(o, i):
+	ox, oy, ow, oh = o
+	ix, iy, iw, ih = i
+	return ox > ix and oy > iy and ox + ow < ix + iw and oy + oh < iy + ih
+ 
+def draw_person(image, person): #画框框
+	x, y, w, h = person
+	cv2.rectangle(image, (x, y), (x + w, y + h), (0, 255, 255), 2)
+ 
 
 
 if __name__ == '__main__':

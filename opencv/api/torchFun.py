@@ -1,4 +1,4 @@
-from flaskApi import *
+from picPro import *
 from load_data import *
 import torch
 
@@ -13,7 +13,11 @@ def getMvsC():
 
         image = img
 
-        print(model.preImg(image))
+        index, probability =model.preImg(image)
+        person = {"index":-1, "prob":0}
+        person['index']=str(index)
+        person["prob"] = str(probability)
+        return person #返回类别以及可能性 0是干净
 
 def getFaceRco():
     flag,imgs = getFace()

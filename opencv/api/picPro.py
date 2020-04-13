@@ -3,9 +3,11 @@ import numpy
 import time
 import flask
 import os
+from load_data import *
 filePath =  os.path.dirname(__file__)
 print(filePath)
 
+#获取监控图片文件
 def getPic():
     image = cv2.imread(filePath+"/../pic.png")
     return image
@@ -13,7 +15,7 @@ def getPic():
     
     cv2.waitKey(0)
     
-
+#获取检测到的人脸
 def getFace():
     img  = getPic()
     classfier = cv2.CascadeClassifier(filePath+ "/../haarcascade_frontalface_default.xml")
@@ -35,6 +37,7 @@ def getFace():
     return len(images) != 0 , images # 返回结构和处理后的人脸数组
     
 
+#获取行人检测处理后的图片
 def getPeo():
     img = getPic()
     
@@ -64,7 +67,7 @@ def getPeo():
 
 
 if __name__ =="__main__":
-    flag, img = getFace()
+    flag, img = getPeo()
     print(flag, len(img))
 
     
