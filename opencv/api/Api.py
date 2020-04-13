@@ -11,21 +11,14 @@ from picPro import *
 app = Flask(__name__)
 CORS(app, resources=r'/*')
 
+
+#刷新资源用，利用这种办法节约能耗
 @app.route('/peo',methods=['POST', 'GET'])
 def hello_world():
     if request.method == "GET":
         flag, img = getPeo()
         cv2.imwrite("../../App/static/img/peo.png", img)
 
-
-  
-
-
-                    
-
-
-   
-        
 
         return 'ok'
     else:
