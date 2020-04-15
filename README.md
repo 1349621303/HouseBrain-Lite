@@ -1,4 +1,4 @@
- # HouseBrain-Lite
+# HouseBrain-Lite
 
 ### `软件工程基础`作业的项目文档&组内学习笔记 from lgx
 
@@ -9,7 +9,7 @@
 | flask-blueprint                     | 蓝图，用于将后端逻辑部分分开    | 1.3.0     |
 | **Flask-Migrate**                   | 迁移仓库，用于更新Model时更方便 | **2.5.3** |
 | Flask-Script                        | Flask脚本                       | 2.0.6     |
-| Flask-SQLAlchemy                    | 一种用于Flask的ORM框架          | 2.4.1     |
+| Flask-SQLAlchemy                      | 一种用于Flask的ORM框架          | 2.4.1     |
 | **PyMySQL**                         | python的MySQL插件               | **0.9.3** |
 | Jinja2                              | 模板引擎                        | 2.11.1    |
 | Flask-Bootstrap                     | 用于引入Bootstrap               | 3.3.7.1   |
