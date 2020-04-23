@@ -1,4 +1,4 @@
- # HouseBrain-Lite
+ # HouseBrain-Lite（Python3.6版本，希望大家抓紧时间做）
 
 ### `软件工程基础`作业的项目文档&组内学习笔记 from lgx
 
