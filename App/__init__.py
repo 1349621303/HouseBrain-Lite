@@ -30,7 +30,7 @@ def create_app(env):
 
     #通过setting.py初始化此app
     # app.config.from_object(envs.get(env))
-    # app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql+pymysql://root:123456@127.0.0.1:3306/housebrainlite'
+    # app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql+pymysql://root:111111@127.0.0.1:3306/housebrainlite'
     # app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = 'False'
     app.config.from_object(envs.get(env))
 
