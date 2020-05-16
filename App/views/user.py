@@ -40,6 +40,7 @@ def login():
             userItem['userpic'] = result.userpic
             userItem['roomid'] = result.roomid
 
+
             # session是http协议的状态跟踪技术，http协议是tcp短连接
             session['user'] = userItem
             # 登录成功，则保存Cookies信息
