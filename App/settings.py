@@ -2,7 +2,7 @@ def get_db_uri(dbinfo):
     engine = dbinfo.get("ENGINE") or "mysql"
     driver = dbinfo.get("DRIVER") or "pymysql"
     user = dbinfo.get("USER") or "root"
-    password = dbinfo.get("PASSWORD") or "123456"
+    password = dbinfo.get("PASSWORD") or "root"
     host = dbinfo.get("HOST") or "localhost"
     port = dbinfo.get("PORT") or "3306"
     dbname = dbinfo.get("DBNAME") or "housebrainlite"
@@ -25,7 +25,7 @@ class DevelopConfig(Config):
         "ENGINE": "mysql",
         "DRIVER": "pymysql",
         "USER": "root",
-        "PASSWORD": "123456",
+        "PASSWORD": "root",
         "HOST": "127.0.0.1",
         "PORT": "3306",
         "DBNAME": "housebrainlite"
@@ -41,7 +41,7 @@ class TestConfig(Config):
         "ENGINE": "mysql",
         "DRIVER": "pymysql",
         "USER": "root",
-        "PASSWORD": "123456",
+        "PASSWORD": "root",
         "HOST": "127.0.0.1",
         "PORT": "3306",
         "DBNAME": "flask_test"
@@ -57,7 +57,7 @@ class StageConfig(Config):
         "ENGINE": "mysql",
         "DRIVER": "pymysql",
         "USER": "root",
-        "PASSWORD": "123456",
+        "PASSWORD": "root",
         "HOST": "127.0.0.1",
         "PORT": "3306",
         "DBNAME": "flask_test"
@@ -73,7 +73,7 @@ class ProductConfig(Config):
         "ENGINE": "mysql",
         "DRIVER": "pymysql",
         "USER": "root",
-        "PASSWORD": "123456",
+        "PASSWORD": "root",
         "HOST": "127.0.0.1",
         "PORT": "3306",
         "DBNAME": "flask_test"
