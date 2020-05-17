@@ -18,6 +18,9 @@ class User(db.Model):
     roommate2 = db.Column(db.String(100)) #室友二【个人信息】【不可修改】
     roommate3 = db.Column(db.String(100)) #室友三【个人信息】【不可修改】
 
+    # hzw
+    roomidentity = db.Column(db.String(100))  # 寝室身份权限
+
     introduction = db.Column(db.String(100)) #个人简介
     userpic = db.Column(db.String(100))  # 个人图片
     # qqt
@@ -31,20 +34,27 @@ class Room(db.Model):
     roomname = db.Column(db.String(100)) # 房间名
     roomadmin = db.Column(db.String(100)) # 宿管
     roomleader = db.Column(db.String(100)) # 寝室长
-
+    # hzw
+    currentnumber = db.Column(db.Integer)  # 当前人数
 
     intemperature = db.Column(db.String(100)) # 室内温度
     inhumidity = db.Column(db.String(100)) # 室内湿度
     outtemperature = db.Column(db.String(100))  # 室外温度
     outhumidity = db.Column(db.String(100))  # 室外湿度
 
+    # hzw
+    equipmentstatus = db.Column(db.String(100))  # 设备损坏情况
+    suspecteddamage = db.Column(db.String(100))  # 可疑损坏设备
+    reportinformation = db.Column(db.String(100))  # 上报信息
+    cleancondition = db.Column(db.String(100))  # 寝室卫生
+    safety = db.Column(db.String(100))  # 安全程度
+
+
     waterlave = db.Column(db.Integer) # 剩余水费
     lightlave = db.Column(db.Integer) # 剩余电费
 
     watermoney = db.Column(db.Integer) # 水费
     lightmoney = db.Column(db.Integer) # 电费
-
-
 
 # qqt
 
