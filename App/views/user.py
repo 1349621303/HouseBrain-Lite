@@ -36,10 +36,12 @@ def login():
             # 定义一个字典
             userItem = {}
             # 开始存数据
+            userItem['id'] = result.id
             userItem['username'] = result.username
             userItem['userpic'] = result.userpic
             userItem['roomid'] = result.roomid
-
+            userItem['petid'] = result.petid
+            userItem['plantid'] = result.plantid
 
             # session是http协议的状态跟踪技术，http协议是tcp短连接
             session['user'] = userItem

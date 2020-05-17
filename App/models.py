@@ -20,7 +20,10 @@ class User(db.Model):
 
     introduction = db.Column(db.String(100)) #个人简介
     userpic = db.Column(db.String(100))  # 个人图片
-
+    # qqt
+    petid = db.Column(db.Integer)  #宠物编号
+    plantid = db.Column(db.Integer) #植物编号
+    orders = db.relation('Order', backref='user')
 
 # 智慧寝室部分
 class Room(db.Model):
@@ -41,6 +44,37 @@ class Room(db.Model):
     watermoney = db.Column(db.Integer) # 水费
     lightmoney = db.Column(db.Integer) # 电费
 
+
+
+# qqt
+
+#宠物部分
+class Pet(db.Model):
+    petid = db.Column(db.Integer, primary_key=True) #宠物编号
+    petname = db.Column(db.String(100)) #宠物姓名
+    starvation = db.Column(db.String(100)) #饥饿状态
+    birth = db.Column(db.DateTime) #出生日期
+    FeedTime = db.Column(db.DateTime) #上次喂食时间
+    Feedinginterval = db.Column(db.Integer) #喂食间隔时间
+    petpic = db.Column(db.String(100))  # 个人图片
+# qqt
+#花草世界
+class Plant(db.Model):
+    plantid = db.Column(db.Integer,primary_key=True)
+    plantname = db.Column(db.String(100)) #植物姓名
+    water = db.Column(db.String(100)) #缺水状况
+    watertime = db.Column(db.DateTime) #上次浇水时间
+    waterinterval = db.Column(db.Integer) #浇水时间间隔
+    plantpic = db.Column(db.String(100)) #植物图片
+# qqt
+#账单信息
+class Order(db.Model):
+    orderid = db.Column(db.Integer,primary_key=True) #订单编号
+    # id = db.Column(db.Integer)   #用户编号
+    orderdate = db.Column(db.DateTime) #订单日期
+    watercost = db.Column(db.Integer) #充值水费
+    lightcost = db.Column(db.Integer) #充值电费
+    id = db.Column(db.Integer, db.ForeignKey('user.id'))
 
 
 
