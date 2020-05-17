@@ -41,7 +41,6 @@ def getFaceRco():
 if __name__== "__main__":
     temp = getMvsC()
     print(temp)
-    ans  = getFaceRco()
-    print(ans)
+
 
     

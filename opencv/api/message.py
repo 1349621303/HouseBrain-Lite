@@ -2,9 +2,10 @@
 import smtplib
 from email.mime.text import MIMEText
 from email.mime.multipart import MIMEMultipart
+from email.mime.text import MIMEText
+from email.mime.image import MIMEImage
 
-
-def sendMe(file):
+def sendMe(file='/home/lwl/Study/code/Python/flask/软件工程/HouseBrain-Lite/App/static/img/photo2.png'):
 
     # 服务器地址
     smtpserver = 'smtp.163.com'
@@ -16,9 +17,15 @@ def sendMe(file):
     receivers  = '2892211452@qq.com'
     # 邮件标题
     subject = '宿舍卫生问题，请您查验'
-    # 获取附件信息
-    with open('name.txt','rb',)as f:
-        body = f.read().decode()
+  
+    # 02. 添加图片
+    file = open("/home/lwl/Study/code/Python/flask/软件工程/整合/HouseBrain-Lite-master/opencv/api/images/images.jpg", "rb")
+    img_data = file.read()
+    file.close()
+    img = MIMEImage(img_data)
+    img.add_header('Content-ID', 'imageid')
+    content = MIMEText('<html><body><img src="cid:imageid" alt="imageid"></body></html>','html','utf-8')
+
     message = MIMEMultipart()
     # 发送地址
     message['From'] = user
@@ -27,14 +34,11 @@ def sendMe(file):
     # 邮件标题
     message['subject'] =subject
     # 正文内容
-    body = MIMEText(body, 'html', 'utf-8')
-    message.attach(body)
-    # 传当前目录中的name.txt文件
-    att = MIMEText(open(file, 'rb').read(), 'base64', 'utf-8')
-    att["Content-Type"] = 'application/octet-stream'    # 死格式
-    # filename 表示附件的名称
-    att["Content-Disposition"] = 'attachment; filename="name.txt"'
-    message.attach(att)
+    message.attach(img)
+    message.attach(content)
+
+
+  
     smtp = smtplib.SMTP()
     # 连接服务器
     smtp.connect(smtpserver)

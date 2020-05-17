@@ -71,7 +71,7 @@ class CNN(nn.Module):
             ans = self.forward(image)
             index = ans.argmax()
             
-            index = index.numpy()
+            index = index.detach().numpy()
             ans = ans.view(ans.size(1))
             pro = ans.detach().numpy()[index]
             #print(ans)
@@ -208,7 +208,7 @@ def pre(model, img):
         ans = model(image)
         index = ans.argmax()
         
-        index = index.numpy()
+        index = index.detach().numpy()
         ans = ans.view(ans.size(1))
         pro = ans.detach().numpy()[index]
         #print(ans)

@@ -16,7 +16,7 @@ import hashlib
 # session（用户对话）、redirect（重定向）、url_for（Flask中提供的URL生成函数）
 from flask import Flask, Blueprint, render_template, session, redirect, url_for, request, Response
 # 这里注意要导入models中的models，而不是extends中的models
-from App.models import db, User
+from App.models import db, User, Room
 
 # 申明一个蓝图对象user
 userblue = Blueprint('userblue', __name__)
@@ -27,6 +27,13 @@ userblue = Blueprint('userblue', __name__)
 @userblue.route('/camera', methods=['POST', 'GET'])
 def camera():
     return render_template('camera.html')
+
+
+@userblue.route('/video', methods=['POST', 'GET'])
+def video():
+    return render_template('video.html')
+
+
 
 
 
@@ -43,9 +50,12 @@ def login():
             # 定义一个字典
             userItem = {}
             # 开始存数据
+            userItem['id'] = result.id
             userItem['username'] = result.username
             userItem['userpic'] = result.userpic
             userItem['roomid'] = result.roomid
+            userItem['petid'] = result.petid
+            userItem['plantid'] = result.plantid
 
             # session是http协议的状态跟踪技术，http协议是tcp短连接
             session['user'] = userItem
@@ -128,3 +138,29 @@ def myupdate():
 @userblue.route('/smartroom/targets')
 def targets():
     return render_template('smartroom/targets.html')
+
+# hzw
+# 登陆后主界面
+@userblue.route('/smartroom/mainView')
+def mainView():
+    item = session.get('user')
+    user = User.query.filter(User.username == item.get("username")).first()
+    user1 = User.query.filter(User.username == user.roommate1).first()
+    user2 = User.query.filter(User.username == user.roommate2).first()
+    user3 = User.query.filter(User.username == user.roommate3).first()
+    room = Room.query.filter(Room.roomid == item.get("roomid")).first()
+    return render_template('smartroom/mainView.html',user = user, user1 = user1, user2 = user2, user3 = user3, room=room)
+
+# 寝室维修界面
+@userblue.route('/smartroom/roomcheck', methods=['POST', 'GET'])
+def roomcheck():
+    item = session.get('user')
+    room = Room.query.filter(Room.roomid == item.get("roomid")).first()
+    if request.method == 'GET':
+        return render_template('smartroom/roomcheck.html', room=room)
+    else:
+        room.reportinformation = request.form.get('check_reportinformation')
+        db.session.add(room)
+        db.session.commit()
+
+        return render_template('smartroom/roomcheck.html', room=room, message='修改成功')

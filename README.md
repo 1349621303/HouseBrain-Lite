@@ -1,4 +1,4 @@
-# HouseBrain-Lite
+ # HouseBrain-Lite（Python3.6版本，希望大家抓紧时间做）
 
 ### `软件工程基础`作业的项目文档&组内学习笔记 from lgx
 
@@ -36,7 +36,7 @@
 >
 > ![在这里插入图片描述](https://img-blog.csdnimg.cn/20200412000938997.png)
 
-下面的是迁移仓库使用时的常见错误
+ 下面的是迁移仓库使用时的常见错误
 
 > 如果数据库迁移Target database is not up to date报错，删掉migration之后重新执行上述三句命令行即可，
 >
@@ -213,7 +213,7 @@ login界面
 
 
 
-# 宿舍视频流实现 form [lwl](https://github.com/2892211452)
+# 宿舍视频流实现 form [lwl]()
 主要技术：
 - opencv
 - 深度学习
@@ -237,5 +237,5 @@ login界面
 - cnn卷积神经网络，正则化，图像增强防止过拟合
 - 迁移学习（考虑到性能，还是不用为好）
 目前在较低的内存开销下，能够实现80%的正确率。
+<修改>
 
-test
